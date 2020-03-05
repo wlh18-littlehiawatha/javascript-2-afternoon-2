@@ -18,6 +18,10 @@ var arr = [10,20,30];
 */
 
 //Code Here
+function first(arr){
+  return arr[0];
+};
+
 
 
 
@@ -33,7 +37,10 @@ var arr = [40,50,60];
 */
 
 //Code Here
-
+              last = (arr) => arr[arr.length-1];
+// function last(arr){
+//   return arr[arr.length-1]
+// }
 
 
 ////////// PROBLEM 3 //////////
@@ -48,6 +55,13 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
+function looper(family){
+  for( let i = 0; i < family.length; i++){
+    //console.log(family[i])
+    alert(family[i])
+  }
+}
+//console.log(family)
 
 
 
@@ -62,7 +76,13 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop backwards, starting at the end of the letters array, alerting every item in the array.
 */
 
-//Code Here
+//Code Here 
+
+function reversedLooper(letters){
+  for(let i = letters.length-1; i >= 0; i--){
+    alert(letters[i])
+  }
+};
 
 
 
@@ -78,6 +98,19 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
+
+function evenFinder(nums){
+  // console.log(nums)
+  let evenNums = [];
+
+  for (let i = 0; i < nums.length; i++){
+    // console.log(nums[i])
+    if(nums[i] % 2===0){
+      evenNums.push(nums[i])
+    }
+  }
+  return evenNums
+};
 
 
 
@@ -108,6 +141,23 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 //Code Here
 
+function divider(numbersArray){
+  let evensArr = [];
+  let oddsArr = [];
+
+  for (let i = 0; i < numbersArray.length; i++){
+    if(numbersArray[i] % 2 === 0){
+      evensArr.push(numbersArray[i])
+    } else {
+      oddsArr.push(numbersArray[i])
+    };
+  };
+  return [evensArr,oddsArr]
+};
+
+
+
+
 
 
 ////////// PROBLEM 7 //////////
@@ -129,6 +179,14 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+
+                function finder(arr){
+                  let randomNumber = getRandomArbitrary();
+                  
+                  // if(randomNumber)
+                  // for (let i = 0, i < )
+                  
+                }
 
 
 
@@ -159,6 +217,10 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
+function removeItem(myGroceryList,cb){
+
+}
+
 
 
 ////////// PROBLEM 9 //////////
@@ -168,6 +230,10 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+
+function maker(cb, cb2, cb3){
+
+}
 
 
 
@@ -184,6 +250,10 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+
+function addTen(numbers){
+  
+}
 
 
 
