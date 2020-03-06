@@ -9,7 +9,7 @@
 ////////// PROBLEM 1 //////////
 
 // Do not edit the code below.
-var arr = [10,20,30];
+var arr = [10, 20, 30];
 // Do not edit the code above.
 
 /*
@@ -18,7 +18,7 @@ var arr = [10,20,30];
 */
 
 //Code Here
-function first(arr){
+function first(arr) {
   return arr[0];
 };
 
@@ -28,7 +28,7 @@ function first(arr){
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
-var arr = [40,50,60];
+var arr = [40, 50, 60];
 // Do not edit the code above.
 
 /*
@@ -37,7 +37,7 @@ var arr = [40,50,60];
 */
 
 //Code Here
-              last = (arr) => arr[arr.length-1];
+last = (arr) => arr[arr.length - 1];
 // function last(arr){
 //   return arr[arr.length-1]
 // }
@@ -55,8 +55,8 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-function looper(family){
-  for( let i = 0; i < family.length; i++){
+function looper(family) {
+  for (let i = 0; i < family.length; i++) {
     //console.log(family[i])
     alert(family[i])
   }
@@ -78,8 +78,8 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 
 //Code Here 
 
-function reversedLooper(letters){
-  for(let i = letters.length-1; i >= 0; i--){
+function reversedLooper(letters) {
+  for (let i = letters.length - 1; i >= 0; i--) {
     alert(letters[i])
   }
 };
@@ -89,7 +89,7 @@ function reversedLooper(letters){
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var nums = [1,2,3,6,22,98,45,23,22,12];
+var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
 // Do not edit the code above.
 
 /*
@@ -99,18 +99,28 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
 //Code Here
 
-function evenFinder(nums){
-  // console.log(nums)
-  let evenNums = [];
+// function evenFinder(nums){
+//   // console.log(nums)
+//   let evenNums = [];
 
-  for (let i = 0; i < nums.length; i++){
-    // console.log(nums[i])
-    if(nums[i] % 2===0){
-      evenNums.push(nums[i])
+//   for (let i = 0; i < nums.length; i++){
+//     // console.log(nums[i])
+//     if(nums[i] % 2===0){
+//       evenNums.push(nums[i])
+//     }
+//   }
+//   return evenNums
+// };
+
+function evenFinder(nums) {
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 !== 0) {
+      nums.splice(i, 1)
     }
   }
-  return evenNums
-};
+  console.log(evenFinder)
+  return nums
+}
 
 
 
@@ -130,7 +140,7 @@ function evenFinder(nums){
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
-var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
+var numbersArray = [1, 2, 34, 54, 55, 34, 32, 11, 19, 17, 54, 66, 13];
 // Do not edit the code above.
 
 /*
@@ -141,18 +151,18 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 //Code Here
 
-function divider(numbersArray){
+function divider(numbersArray) {
   let evensArr = [];
   let oddsArr = [];
 
-  for (let i = 0; i < numbersArray.length; i++){
-    if(numbersArray[i] % 2 === 0){
+  for (let i = 0; i < numbersArray.length; i++) {
+    if (numbersArray[i] % 2 === 0) {
       evensArr.push(numbersArray[i])
     } else {
       oddsArr.push(numbersArray[i])
     };
   };
-  return [evensArr,oddsArr]
+  return [evensArr, oddsArr]
 };
 
 
@@ -163,7 +173,7 @@ function divider(numbersArray){
 ////////// PROBLEM 7 //////////
 
 // Do not edit the code below.
-var getRandomArbitrary = function() {
+var getRandomArbitrary = function () {
   return Math.floor(Math.random() * 30);
 };
 // Do not edit the code above.
@@ -180,13 +190,45 @@ var getRandomArbitrary = function() {
 
 //Code Here
 
-                function finder(arr){
-                  let randomNumber = getRandomArbitrary();
-                  
-                  // if(randomNumber)
-                  // for (let i = 0, i < )
-                  
-                }
+// // -------------------> this finally works because of the placement of the return statement. it was getting kicked out of the function at the first instance of the return and would therefore never hit the second return statement.<--------------
+
+function finder(arr) {
+  let randomNumber = getRandomArbitrary()
+  console.log(arr.length)
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === randomNumber) {
+      return true
+    } else {
+    }
+  }
+  return false
+};
+
+// function finder(arr) {
+//   let randomNumber = getRandomArbitrary()
+//   // console.log(randomNumber)
+
+//   for (let i = 0; i < arr.length; i++ ){
+//     console.log(arr[i], randomNumber)
+//     if(arr[i] === randomNumber){
+//       return true
+//     } else{
+//       return false
+//     }
+//   }
+// }
+
+
+// function finder (arr){
+//   let randomNumber = getRandomArbitrary()
+//                                                             console.console.log(arr.length);
+
+//   for(let i = 0; i < arr.length; i++){
+
+
+//   }
+// }
+
 
 
 
@@ -217,8 +259,26 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
-function removeItem(myGroceryList,cb){
+function removeItem(myGroceryList, item) {
+  if (myGroceryList && item) {
+    for (let i = 0; i < myGroceryList.length; i++) {
+      if (myGroceryList[i] === item) {
+        myGroceryList.splice(i, 1)
+      }
+    }
+    return myGroceryList
+  } else {
+    return []
+  }
+}
 
+function addItem(myGroceryList,item){
+  if(myGroceryList && item){
+    myGroceryList.push(item)
+    return myGroceryList
+  } else{
+    return []
+  }
 }
 
 
@@ -231,7 +291,7 @@ function removeItem(myGroceryList,cb){
 
 //Code Here
 
-function maker(cb, cb2, cb3){
+function maker(cb, cb2, cb3) {
 
 }
 
@@ -248,11 +308,11 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Return a new array after adding ten to each item in numbers. 
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
-  
+
 //Code Here
 
-function addTen(numbers){
-  
+function addTen(numbers) {
+
 }
 
 
@@ -264,10 +324,10 @@ var num1 = Math.floor(Math.random() * 30);
 var num2 = Math.floor(Math.random() * 30);
 var arr1 = [];
 var arr2 = [];
-for(var i = 0; i < num1; i++){
+for (var i = 0; i < num1; i++) {
   arr1.push(i);
 }
-for(var i = 0; i < num2; i++){
+for (var i = 0; i < num2; i++) {
   arr2.push(i);
 }
 // Do not edit the code above.
@@ -280,97 +340,128 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
+// function longer(arr1, arr2) {
+//   if (arr1.length > arr2.length) {
+//     return arr1
+//   } else if (arr1.length < arr2.length) {
+//     return arr2
+//   } else {
+//     return 'Both arrays are the same length'
+//   }
+
+function longer(arr1,arr2){
+  if(arr1.length > arr2.length){
+    return arr1
+  } else {
+    return arr2
+  }
+}
 
 
-/*
-  As a continuation of the previous problem, write another function called 'both'.
-  Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
-  'both' should return a new array with the matching numbers found in both arr1 and arr2.
 
-  Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
-*/
+  /*
+    As a continuation of the previous problem, write another function called 'both'.
+    Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
+    'both' should return a new array with the matching numbers found in both arr1 and arr2.
+  
+    Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
+  */
 
-//Code Here
+  //Code Here
+
+  function both(arr1, arr2){
+    
+    let matchingNums =[]
+    
+    for(let i = 0; i < arr1.length; i++){
+      for(let j = 0; j < arr2.length; j++){
+        if(arr1[i] === arr2[j]){
+          matchingNums.push(arr1[i])
+        }
+      }
+    }
+    return matchingNums
+  }
 
 
 
-////////// PROBLEM 12 //////////
+  ////////// PROBLEM 12 //////////
 
-// Do not edit the code below.
-var devMountainEmployees = [];
+  // Do not edit the code below.
+  var devMountainEmployees = [];
 
-var joe = {
+  var joe = {
     name: 'Joe',
     position: 'Instructor',
     spiritAnimal: 'Honey Badger'
-};
+  };
 
-var cahlan = {
+  var cahlan = {
     name: 'Cahlan',
     position: 'CEO',
     spiritAnimal: 'butterfly'
-};
+  };
 
-var ryan = {
+  var ryan = {
     name: 'Ryan',
     position: 'Marketing',
     spiritAnimal: 'fox'
-};
+  };
 
-var colt = {
+  var colt = {
     name: 'Colt',
     position: 'Everything really',
     spiritAnimal: 'Young Male Horse'
-};
-// Do not edit the code above.
+  };
+  // Do not edit the code above.
 
-/*
-  Above you're given an empty array and four variables containing objects. 
-  Fill the devMountainEmployees array with those four objects. Do this in either
-  the global scope or in a function. If done in a function, invoke it.
-  After that, console.log the length of the Array and make sure that it's equal to 4. 
-*/
+  /*
+    Above you're given an empty array and four variables containing objects. 
+    Fill the devMountainEmployees array with those four objects. Do this in either
+    the global scope or in a function. If done in a function, invoke it.
+    After that, console.log the length of the Array and make sure that it's equal to 4. 
+  */
 
-//Code Here
-
-
-
-/*
-  Now let's say Cahlan has to take a leave of absence.
-  Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
-*/
-
-//Code Here
+  //Code Here
 
 
 
-////////// PROBLEM 13 //////////
+  /*
+    Now let's say Cahlan has to take a leave of absence.
+    Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
+  */
 
-
-/*
-  A very clean way to pass around large LISTS (arrays) of COLLECTIONS (objects) of data is to have an array full of objects. 
-  Create an empty array called users.
-*/
-
-//Code Here
+  //Code Here
 
 
 
-/*
-  Now add three user objects to your users array. Each user object should contain the following properties: name, email, password, username.
+  ////////// PROBLEM 13 //////////
 
-  Include the following user1 object as one of the objects in your array.
+
+  /*
+    A very clean way to pass around large LISTS (arrays) of COLLECTIONS (objects) of data is to have an array full of objects. 
+    Create an empty array called users.
+  */
+
+  //Code Here
+
+
+
+  /*
+    Now add three user objects to your users array. Each user object should contain the following properties: name, email, password, username.
   
-  MAKE SURE TO DO THIS IN THE SECTION BELOW WHERE USER1 IS DECLARED
-*/
+    Include the following user1 object as one of the objects in your array.
+    
+    MAKE SURE TO DO THIS IN THE SECTION BELOW WHERE USER1 IS DECLARED
+  */
 
-// Do not edit the code below.
-var user1 = {
+  // Do not edit the code below.
+  var user1 = {
     name: 'Mark McIver',
     email: 'mark.mciver@devmounta.in',
     password: 'hunter2',
     username: 'ihazcode'
-};
+  };
 // Do not edit the code above.
 
 //Code Here
@@ -378,7 +469,7 @@ var user1 = {
 
 
 /*
-  Now you have a very common data structure. 
+  Now you have a very common data structure.
   Twitter is a good use case.
   It's easy to imagine that your followers list on Twitter is an array full of objects and those objects contain properties about the specific person you follow.
 
